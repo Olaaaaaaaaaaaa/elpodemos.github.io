@@ -1,0 +1,368 @@
+html,
+body {
+    overflow: hidden;
+    background: #121212e0;
+}
+
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    animation: fadeIn 2s ease-in;
+}
+
+.card {
+    height: 550px;
+    width: 900px;
+    background: #d4cccc;
+}
+
+.img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-100%) translateY(-50%);
+    background-size: contain;
+    background-repeat: repeat;
+}
+.imgDanny {
+    background-image: url(img/Uprajay_danny.jfif);
+    height: 450px;
+    width: 450px;
+    left: 50%;
+}
+.imgWiam {
+    background-image: url(img/wiam1.jpg);
+    height: 450px;
+    width: 245px;
+    left: 40%;
+}
+.imgAli {
+    background-image: url(img/ali.jpg);
+    height: 450px;
+    width: 336px;
+    left: 45%;
+}
+.imgIlyes {
+    background-image: url(img/Ilyes.png);
+    height: 287px;
+    width: 350px;
+    left: 45%;
+}
+.imgMeihdi {
+    background-image: url(img/Meihdi.jpeg);
+    height: 450px;
+    width: 339px;
+    left: 45%;
+}
+.imgJoris {
+    background-image: url(img/Joris.png);
+    height: 420px;
+    width: 315px;
+    left: 45%;
+}
+.imgIslame {
+    background-image: url(img/Islame.jpg);
+    height: 400px;
+    width: 400px;
+    left: 50%;
+}
+.imgYanis {
+    background-image: url(img/Yanis.png);
+    height: 430px;
+    width: 323px;
+    left: 45%;
+}
+.imgBaha {
+    background-image: url(img/baha.png);
+    height: 430px;
+    width: 344px;
+    left: 45%;
+}
+.imgJulien {
+    background-image: url(img/Julien.png);
+    height: 430px;
+    width: 322px;
+    left: 45%;
+}
+.imgMiSun {
+    background-image: url(img/mi-sun.png);
+    height: 440px;
+    width: 353px;
+    left: 45%;
+}
+.imgSoufiane {
+    background-image: url(img/soufiane.png);
+    height: 440px;
+    width: 295px;
+    left: 45%;
+}
+.imgYassine {
+    background-image: url(img/yassine.png);
+    height: 400px;
+    width: 371px;
+    left: 47%;
+}
+.imgMarilyne {
+    background-image: url(img/Marilyne.png);
+    height: 440px;
+    width: 200px;
+    left: 38%;
+}
+.imgFranck {
+    background-image: url(img/Franck.jpg);
+    height: 372px;
+    width: 350px;
+    left: 45%;
+}
+.imgElias {
+    background-image: url(img/Elias.jpg);
+    height: 430px;
+    width: 322px;
+    left: 45%;
+}
+.imgMichel {
+    background-image: url(../images/catalogue/michel.jpg);
+    height: 430px;
+    width: 304px;
+    left: 45%;
+}
+.imgCharlotte {
+    background-image: url(../images/catalogue/charlotte.jpg);
+    height: 430px;
+    width: 302px;
+    left: 45%;
+}
+
+.close {
+    left: 380px;
+    top: 5px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+
+
+
+.buttonCV {
+  --border: none;
+  color: var(--color);
+  background: var(--background);
+  border: 1px solid var(--border);
+
+  font-family: inherit;
+  padding: 0.6rem 1.25rem;
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* overflow and position matching the pseudo elements */
+  overflow: hidden;
+  position: relative;
+  /* remove the default outline
+! substituted with the pseudo elements
+*/
+  outline: none;
+}
+/* if existing, separate the inline icon from the text which follows */
+
+/* with a pseudo element add a semitransparent layer with the same color of the text */
+.buttonCV:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  border-radius: inherit;
+  opacity: 0;
+}
+.buttonCV:focus:before,
+.buttonCV:hover:before {
+  opacity: 0.1;
+}
+
+/* with another pseudo element add a semitransparent layer clipped to be a circle */
+.buttonCV:after {
+  content: "";
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  transform: translate(-50%, -50%);
+  width: var(--size);
+  height: var(--size);
+  background: currentColor;
+  clip-path: circle(0%);
+  opacity: 0.3;
+  border-radius: inherit;
+}
+/*
+! add the transition only as the active state is "enabled"
+! add a negative delay for the clip to already start from a small circle
+! add a delay for the opacity to follow the clip-path
+*/
+.buttonCV:active:after {
+  clip-path: circle(100%);
+  opacity: 0;
+  transition: clip-path 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53), opacity 0.4s ease-in-out;
+  transition-delay: -0.1s, 0.5s;
+}
+
+
+.headline {
+    position: absolute;
+    top: 35%;
+    transform: translateX(100%) translateY(-150%);
+    text-align: center;
+    font-family: 'Playfair Display SC', serif;
+}
+.para {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    right: 15%;
+    transform: translateX(20%) translateY(-20%);
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+}
+
+#dot {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(140%) translateY(200%);
+    background-image: url(http://www.appladesign.net/domains/create/documents/dots_266.png);
+    background-size: contain;
+    background-repeat: repeat;
+    z-index: 2;
+}
+
+#dot:before {
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-850%) translateY(-280%);
+    background-image: url(http://www.appladesign.net/domains/create/documents/dots_266.png);
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(35%) translateY(-510%);
+    text-align: center;
+    font-family: 'Playfair Display SC', serif;
+
+}
+.article:after {
+    content: "0411";
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    top: 50%;
+    left: 10%;
+    transform: translateX(280%) translateY(-5%);
+    font-weight: bold;
+}
+
+.article a {
+    text-decoration: none;
+}
+
+.article a p {
+    color: black;
+}
+
+.article a p span {
+    color: red;
+}
+
+.block {
+    background: rgb(183, 56, 56);
+    opacity: .5;
+    position: absolute;
+    height: 5px;
+    width: 200px;
+    top: 5%;
+    left: 65%;
+}
+
+.block:before {
+    content: "";
+    background: rgb(183, 56, 56);
+    opacity: .5;
+    position: absolute;
+    height: 5px;
+    width: 80px;
+    top: 500px;
+    left: -145px;
+}
+
+.next a {
+    text-decoration: none;
+    color: black;
+}
+
+.next h2 {
+    position: absolute;
+    height: 5px;
+    width: 80px;
+    top: 480px;
+    left: 460px;
+}
+
+.pre a {
+    text-decoration: none;
+    color: black;
+}
+
+.pre h2 {
+    position: absolute;
+    height: 5px;
+    width: 80px;
+    top: 480px;
+    left: 380px;
+}
+
+/* Keyframes */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

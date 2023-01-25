@@ -1,0 +1,224 @@
+
+  Even .seven h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+  }
+
+  /* .seven h1:after,
+  .seven h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+    height: 5px;
+    background-color: #000000;
+  } */
+
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: 0.5% auto;
+
+  }
+
+  .first{
+    background-color:#e2623f;
+  }
+  .second{
+    background-color: #ffd350;
+  }
+  .third{
+    background-color: #10a9de;
+  }
+  .fourth{
+    background-color: #59b031;
+  }
+  .fifth{
+    background-color: #6c328a;
+  }
+
+  .timeline__event {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    margin: 5px 0;
+    border-radius: 8px;
+
+
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  }
+
+  .timeline__event__title {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    left: 50%;
+    bottom: 15%;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #941414;
+    letter-spacing: 1.5px;
+
+
+  }
+
+  .timeline__event__content {
+    padding: 20px;
+  }
+
+  .timeline__event__date {
+    color: #b89a9a;
+    font-size: 1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .timeline__event__icon {
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 10%;
+    font-size: 2rem;
+    /* color: #bf3333; */
+    padding: 10px;
+
+  }
+
+  .timeline__event__icon i {
+    position: absolute;
+    top: 50%;
+    left: -65px;
+    font-size: 2.5rem;
+    transform: translateY(-50%);
+    /* border: 1px solid #000000; */
+  }
+
+  /*........BOUTON........*/
+  .timeline__event__description {
+    list-style: inside;
+  }
+
+  .timeline__event__description li {
+    margin-top: 20px;
+    list-style: inside;
+    color: black;
+
+  }
+
+  /* .timeline__event:after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 52%;
+    left: -3.5rem;
+    z-index: -1;
+    border: 1px solid #9d9d9d;
+    border: 2px solid red;
+    border-radius: 12px;
+    padding: 5px;
+  } */
+
+  /* .timeline__event:before {
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    background: #b44141;
+    border-radius: 100%;
+    left: -6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #000000;
+
+  } */
+
+  .timeline__event--type1:before {
+    background: #be2525;
+    /* border: 1px solid #000000; */
+
+
+  }
+
+  .timeline__event--type1:after {
+    background: #be2525;
+    /* border: 1px solid #000000; */
+
+
+  }
+
+  .timeline__event--type1 .timeline__event__date {
+    color: black;
+    bottom: 63px;
+    left: 670px;
+    font-size: 1.1rem;
+  }
+
+  .timeline__event--type1 .timeline__event__icon {
+
+    color: #be2525;
+
+  }
+
+  .timeline__event--type1 .timeline__event__title {
+    color: #000000;
+
+
+    /* border: 1px solid rgb(0, 0, 0);
+    border-radius: 12px; */
+    padding: 5px;
+  }
+
+  .timeline__event:last-child:after {
+    content: none;
+
+  }
+
+  @media (max-width: 786px) {
+    .timeline__event {
+      flex-direction: column;
+    }
+
+    .timeline__event__icon {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+
+  .testdu {
+    position: absolute;
+    right: 2px;
+    top: 8px;
+    /* height: 30px;
+    width: 30px; */
+    visibility: hidden;
+    transition: 1.5s;
+    z-index: -1;
+  }
+
+  .testdu img {
+    width: 230px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .timeline__event:hover .testdu {
+    visibility: visible;
+    transform: translateX(100%);
+  }
